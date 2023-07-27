@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+    --text-font: 'Space Grotesk', sans-serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-form{
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-img{
+    width: 40vw;
+    background-image: url('../images/bg-main-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.img-card{
+    width: 370px;
+    height: 210px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    background-image: url('../images/');
+    position: absolute;
+}
+
+#front-card{
+    top: 215px;
+    left: 90px;
+    background-image: url('../images/bg-card-front.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#back-card{
+    top: 460px;
+    left: 170px;
+    background-image: url('../images/bg-card-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+form{
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.card-details{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.card-details label{
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.card-details input{
+    width: 100%;
+    height: 46px;
+    border: none;
+    border: 1.6px solid rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+.card-details input:focus,#exp-date-container input:focus{
+    outline: none;
+    border: 1.8px solid #350e4b;
+}
+
+#exp-date-container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+#exp-date-container label{
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#exp-date-container input{
+    border: none;
+    border: 1.6px solid rgb(0, 0, 0,0.4);
+    border-radius: 8px;
+    width: 80px;
+    height: 46px;
+}
+
+#container-date input{
+    margin: 8px 12px 0px 0px; 
+}
+#container-cvc input{
+    width: 200px;
+    height: 46px;
+    margin-top: 8px;
+}
+
+#form-buttons{
+    width: 90%;
+}
+#form-buttons input{
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background-color:#350e4b;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
