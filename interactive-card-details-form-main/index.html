@@ -13,29 +13,31 @@
 <body>
     <div class="container">
 
-        <div class="container-form">
+        <div class="right-section">
           <form action="#" method="get" autocomplete="off">
 
             <div id="card-name-container" class="card-details">
               <label for="card-name">CARDHOLDER NAME</label>
-              <input type="text" name="card-name" id="card-name" required>
+              <input type="text" name="card-name" id="card-name" required placeholder="e.g. Jane Appleseed">
             </div>
 
             <div id="card-number-container" class="card-details">
               <label for="card-number">CARD NUMBER</label>
-              <input type="text" name="card-number" id="card-number" required>
+              <input type="text" name="card-number" id="card-number" required placeholder="e.g. 1234 5678 9123 0000">
             </div>
 
             <div id="exp-date-container">
               <div id="container-date">
-                <label for="exp-date-month">EX. DATE (MM/YY)</label><br>
-                <input type="text" name="exp-date" id="exp-date-month" required>
-                <input type="text" name="exp-date" id="exp-date-year" required>
+                <label for="exp-date-month">EXP.DATE (MM/YY)</label>
+                <div>
+                  <input type="text" name="exp-date" id="exp-date-month" required placeholder="MM">
+                  <input type="text" name="exp-date" id="exp-date-year" required placeholder="YY">
+                </div>
               </div>
               
               <div id="container-cvc">
-                <label for="cvc-number">CVC</label><br>
-                <input type="text" name="cvc-number" id="cvc-number" required>
+                <label for="cvc-number">CVC</label>
+                <input type="text" name="cvc-number" id="cvc-number" required placeholder="e.g. 123">
               </div>
             </div>
 
@@ -44,15 +46,34 @@
             </div>
           </form>
 
+
+          <div class="hidden">
+            <div id="check-icon">
+              <img src="images/icon-complete.svg" alt="check-icon">
+            </div>
+            <div id="hidden-text">
+              <h1>THANK YOU!</h1>
+              <p>We've added your card details</p>
+            </div>
+            <div id="continue-button">
+              <input type="button" value="Continue">
+            </div>
+          </div>
+
         </div>
 
-        
-        <div class="container-img">
-          <div class="img-card" id="front-card">
+        <div class="left-section">
+
+          <div class="cards-container">
+            <div class="img-card" id="front-card">
+              <img src="images/bg-card-front.png" alt="front-card">
+            </div>
+
+            <div class="img-card" id="back-card">
+              <img src="images/bg-card-back.png" alt="back-card">
+            </div>
           </div>
 
-          <div class="img-card" id="back-card">
-          </div>
         </div>
 
       </div>

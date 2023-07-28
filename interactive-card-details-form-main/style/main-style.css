@@ -23,7 +23,7 @@ body{
     flex-direction: row-reverse;
 }
 
-.container-form{
+.right-section{
     width: 70vw;
     display: flex;
     align-items: center;
@@ -31,8 +31,8 @@ body{
     flex-direction: column;
 }
 
-.container-img{
-    width: 40vw;
+.left-section{
+    width: 30vw;
     background-image: url('../images/bg-main-desktop.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,35 +40,31 @@ body{
     position: relative;
 }
 
-.img-card{
-    width: 370px;
-    height: 210px;
-    margin-bottom: 12px;
-    border-radius: 16px;
-    background-image: url('../images/');
-    position: absolute;
+
+.cards-container{
+   width: 420px;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   top: 50%;
+   left: 100%; /* Posiciona 'exatamente' na metade da borda*/
+   transform: translate(-50%, -50%);
+}
+
+#front-card img, #back-card img{
+    width: 100%;
 }
 
 #front-card{
-    top: 215px;
-    left: 90px;
-    background-image: url('../images/bg-card-front.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-#back-card{
-    top: 460px;
-    left: 170px;
-    background-image: url('../images/bg-card-back.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    transform: translate(-100px);
 }
 
-
+/*
+----------------------- form -------------------------
+*/
 form{
-    width: 460px;
+    width: 470px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,13 +118,21 @@ form{
     height: 46px;
 }
 
-#container-date input{
-    margin: 8px 12px 0px 0px; 
+#container-date, #container-cvc{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
 }
+
+#container-date div{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
 #container-cvc input{
-    width: 200px;
+    width: 190px;
     height: 46px;
-    margin-top: 8px;
 }
 
 #form-buttons{
@@ -143,5 +147,48 @@ form{
     color: white;
     font-size: 1em;
     letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/*
+    mensagem de agradecimento
+*/
+
+.hidden{
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    display: none;
+}
+
+#hidden-text{
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 42px;
+}
+
+#hidden-text p{
+    color: #00000080;
+}
+
+#continue-button{
+    width: 100%;
+}
+
+#continue-button input{
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+    border: none;
+    background-color: #350e4b;
+    color: white;
+    font-size: 1em;
     cursor: pointer;
 }
