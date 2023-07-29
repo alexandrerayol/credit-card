@@ -35,7 +35,6 @@ function validateNumber(){
     isOnlyNumbers = regexNumber.test(cardNumber.value);
     isTrueLengthNumber = cardNumber.value.length == 16 
 
-    console.log(!isOnlyNumbers, !isTrueLengthNumber)
     if(!isOnlyNumbers){
         errorNumber.style.display = 'block';
         cardNumber.style.border = '2px solid red';
@@ -54,3 +53,35 @@ input[2].addEventListener('input', validateDate);
 input[3].addEventListener('input', validateDate);
 input[4].addEventListener('input', validateDate);
 
+function validateDate(event){
+    // get inputs
+    let cardMonth = input[2];
+    let cardYear = input[3];
+    let cardCvv = input[4];
+    // get error messenger
+    let dateError = errorMessenger[2];
+    let cvvError = errorMessenger[3];
+    //regex tests
+    let regexMonth = /^(0[1-9]|1[0-2])$/;
+    let monthTest = regexMonth.test(cardMonth.value);
+    let regexYear = /^(0?[0-9]|[1-9][0-9])$/;
+    let yearTest = regexYear.test(cardYear.value);
+    let currentyYear = Number(String(new Date().getFullYear()).slice(2));
+
+    let regexCvv = /^[0-9]+$/;
+    let cvvTest = regexCvv.test(cardCvv.value);
+
+    if(!monthTest || Number(cardYear.value) < currentyYear || !yearTest){
+        cardYear.style.border = '2px solid red';
+        cardMonth.style.border = '2px solid red';
+        cardCvv.style.border = '2px solid red';
+
+    }else if(!cvvTest || cardCvv.value.length < 3){
+        cardYear.style.border = '1.6px solid black';
+        cardMonth.style.border = '1.6px solid black';
+        cardCvv.style.border = '2px solid red';
+
+    }else{
+        cardCvv.style.border = '1.6px solid black';
+    }
+}
