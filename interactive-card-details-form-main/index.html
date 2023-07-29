@@ -14,35 +14,38 @@
     <div class="container">
 
         <div class="right-section">
-          <form action="#" method="get" autocomplete="off">
+          <form autocomplete="off">
 
             <div id="card-name-container" class="card-details">
               <label for="card-name">CARDHOLDER NAME</label>
-              <input type="text" name="card-name" id="card-name" required placeholder="e.g. Jane Appleseed">
+              <input type="text" name="card-name" id="card-name" required placeholder="e.g. Jane Appleseed" maxlength="16">
+              <p>Apenas letras, mínimo 8 caracteres e máximo 16</p>
             </div>
 
             <div id="card-number-container" class="card-details">
               <label for="card-number">CARD NUMBER</label>
-              <input type="text" name="card-number" id="card-number" required placeholder="e.g. 1234 5678 9123 0000">
+              <input type="text" name="card-number" id="card-number" required placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+              <p>Apenas números, sem espaços em branco.</p>
             </div>
 
             <div id="exp-date-container">
               <div id="container-date">
                 <label for="exp-date-month">EXP.DATE (MM/YY)</label>
                 <div>
-                  <input type="text" name="exp-date" id="exp-date-month" required placeholder="MM">
-                  <input type="text" name="exp-date" id="exp-date-year" required placeholder="YY">
+                  <input type="text" name="exp-date" id="exp-date-month" required placeholder="MM" maxlength="2">
+                  <input type="text" name="exp-date" id="exp-date-year" required placeholder="YY" maxlength="2">
                 </div>
+                <p>Data inválida.</p>
               </div>
-              
               <div id="container-cvc">
                 <label for="cvc-number">CVC</label>
-                <input type="text" name="cvc-number" id="cvc-number" required placeholder="e.g. 123">
+                <input type="text" name="cvc-number" id="cvc-number" required placeholder="e.g. 123" maxlength="3">
+                <p>Número de cvv inválido.</p>
               </div>
             </div>
 
             <div id="form-buttons">
-              <input type="button" value="Confirm">
+              <input type="submit" value="Confirm">
             </div>
           </form>
 
@@ -66,11 +69,35 @@
 
           <div class="cards-container">
             <div class="img-card" id="front-card">
+
               <img src="images/bg-card-front.png" alt="front-card">
+              <div id="logo-card">
+                <img src="images/Mastercard Symbol - SVG - BR/Artwork/mc_symbol.svg" alt="card-logo">
+              </div>
+              <div id="info-impresso-container">
+                <div id="numero-impresso">
+                  <p>0000</p>
+                  <p>0000</p>
+                  <p>0000</p>
+                  <p>0000</p>
+                </div>
+                <div id="nome-impresso">
+                  <p>SEU NOME AQUI</p>
+                </div>
+                <div id="validade-impresso">
+                  <p>00</p>
+                  <p>/</p>
+                  <p>00</p>
+                </div>
+              </div>
+
             </div>
 
             <div class="img-card" id="back-card">
               <img src="images/bg-card-back.png" alt="back-card">
+              <div id="cvv-impresso">
+                <p>000</p>
+              </div>
             </div>
           </div>
 

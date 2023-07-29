@@ -87,12 +87,15 @@ form{
     width: 100%;
     height: 46px;
     border: none;
-    border: 1.6px solid rgba(0, 0, 0, 0.4);
+    border: 1.6px solid #00000066;
     border-radius: 8px;
+
+    font-size: 1.1em;
+    text-indent: 12px;
 }
 .card-details input:focus,#exp-date-container input:focus{
     outline: none;
-    border: 1.8px solid #350e4b;
+    border: 1.8px solid #711fa0;
 }
 
 #exp-date-container{
@@ -116,6 +119,9 @@ form{
     border-radius: 8px;
     width: 80px;
     height: 46px;
+
+    font-size: 1.1em;
+    text-indent: 12px;
 }
 
 #container-date, #container-cvc{
@@ -149,6 +155,8 @@ form{
     letter-spacing: 2px;
     cursor: pointer;
 }
+
+
 
 /*
     mensagem de agradecimento
@@ -191,4 +199,84 @@ form{
     color: white;
     font-size: 1em;
     cursor: pointer;
+}
+
+/* 
+Informações impressas no cartão 
+*/
+
+#logo-card{
+    position: absolute;
+    width: 90px;
+    top: 22%;
+    left: 18%;
+    transform: translate(-50%,-50%);
+}
+#numero-impresso{
+    display: flex;
+    gap: 12px;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    letter-spacing: 2px;
+}
+
+#nome-impresso {
+    color: white;
+    font-size: .9em;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 78%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+}
+
+#validade-impresso{
+    color: white;
+    font-size: .9em;
+    letter-spacing: 2px;
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    top: 78%;
+    left: 82%;
+    transform: translate(-50%,-50%);
+}
+
+#cvv-impresso{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 1.1em;
+    position: absolute;
+    top: 75%;
+    left: 82%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*
+    mensagens de erro
+*/
+
+form p{
+    color: #ff6d6d;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+#card-name-container p{
+    display: none;
+}
+
+#card-number-container p{
+    display: none;
+
+}
+
+#exp-date-container p{
+    display: none;
 }
