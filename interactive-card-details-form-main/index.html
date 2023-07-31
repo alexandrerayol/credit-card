@@ -35,12 +35,18 @@
                   <input type="text" name="exp-date" id="exp-date-month" required placeholder="MM" maxlength="2">
                   <input type="text" name="exp-date" id="exp-date-year" required placeholder="YY" maxlength="2">
                 </div>
-                <p>Data inválida.</p>
               </div>
               <div id="container-cvc">
                 <label for="cvc-number">CVC</label>
                 <input type="text" name="cvc-number" id="cvc-number" required placeholder="e.g. 123" maxlength="3">
-                <p>Número de cvv inválido.</p>
+              </div>
+            </div>
+            <div id="errorMessengers">
+              <div>
+                <p id="errorCvv">Número de cvv inválido.</p>
+              </div>
+              <div>
+                <p id="errorDate">Data inválida.</p>
               </div>
             </div>
 
