@@ -153,5 +153,4 @@ function exibeNumero(event){
 }
 
 function exibeAgradecimento(event){
-    event.
 }
