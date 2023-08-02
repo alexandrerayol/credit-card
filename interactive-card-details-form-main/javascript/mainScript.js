@@ -7,6 +7,8 @@ const dataNoCartao = document.querySelectorAll('#validade-impresso p');
 const cvvNoCartao = document.querySelector('#cvv-impresso p');
 const numeroNoCartao = document.querySelector('#numero-impresso p');
 
+const telaAgradecimento = document.querySelector('.hidden');
+
 input[0].addEventListener('input', validateName); //name
 input[1].addEventListener('input', validateNumber);//namber
 input[2].addEventListener('input', validateDate);//date-month
@@ -37,7 +39,7 @@ function validateName(event){
 
     }else{
         errorName.style.display = 'none';
-        cardName.style.border = '1.6px solid #00000066';
+        cardName.style.border = '';
     }
     return true;
 }
@@ -59,7 +61,7 @@ function validateNumber(event){
     }
     else{
         errorNumber.style.display = 'none';
-        cardNumber.style.border = '1.6px solid #00000066';
+        cardNumber.style.border = '';
     }
     return true;
 }
@@ -83,8 +85,8 @@ function validateDate(event){
         dateError.style.display = 'block';
 
     }else{
-        cardYear.style.border = '1.6px solid black';
-        cardMonth.style.border = '1.6px solid black';
+        cardYear.style.border = '';
+        cardMonth.style.border = '';
         dateError.style.display = 'none';
     }
     return true;
@@ -100,7 +102,7 @@ function validateCvv(event){
         cardCvv.style.border = '2px solid red';
         errorCvv.style.display = 'block';
     }else{
-        cardCvv.style.border = '1.6px solid black';
+        cardCvv.style.border = '';
         errorCvv.style.display = 'none';
     }
     return true;
@@ -153,4 +155,18 @@ function exibeNumero(event){
 }
 
 function exibeAgradecimento(event){
+    event.preventDefault();
+    if(validateName() && validateNumber() && validateDate() && validateCvv()){
+        form.style.display = 'none';
+        telaAgradecimento.style.display = 'flex';
+    }else{
+        validateName();
+        validateNumber();
+        validateDate();
+        validateCvv();
+    }
+}
+
+function reloadPage(){
+    location.reload();
 }

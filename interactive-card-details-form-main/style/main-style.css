@@ -92,9 +92,9 @@ form{
 
     font-size: 1.1em;
     text-indent: 12px;
+    outline: none;
 }
 .card-details input:focus,#exp-date-container input:focus{
-    outline: none;
     border: 1.8px solid #711fa0;
 }
 
@@ -121,6 +121,7 @@ form{
 
     font-size: 1.1em;
     text-indent: 12px;
+    outline: none;
 }
 
 #container-date, #container-cvc{
